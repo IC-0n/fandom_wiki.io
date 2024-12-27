@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет - Когда плачут цикады</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="assets/images/logo.jpg" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Когда плачут цикады</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="dictionary.html">Словарь</a></li>
+                <li><a href="gallery.html">Галерея</a></li>
+                <li><a href="test.html">Тест</a></li>
+                <li><a href="profile.html">Личный кабинет</a></li>
+            </ul>
+        </nav>
+        <p id="user-greeting" class="user-greeting"></p>
+    </header>
+    
+
+    <main>
+        <section id="profile-section">
+            <h2>Личный кабинет</h2>
+            <p><strong>Логин:</strong> <span id="user-login">-</span></p>
+            <p><strong>Дата рождения:</strong> <span id="user-birthdate">-</span></p>
+            <p><strong>Пол:</strong> <span id="user-gender">-</span></p>
+            <p><strong>Результат последнего теста:</strong> <span id="test-result">Результаты отсутствуют</span></p>
+            <button id="logout">Выйти</button>
+        </section>
+    </main>
+
+    <footer>
+        <section>
+            <h3>Контактные данные</h3>
+            <p>Телефон: <a href="#">+7 (000) 000-00-00</a></p>
+            <p>Соцсети:
+                <a href="#">ВКонтакте</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+            </p>
+        </section>
+        <p>&copy; 2024 Фан-сайт "Когда плачут цикады". Все права защищены.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Получение данных пользователя из sessionStorage
+            const userLogin = sessionStorage.getItem('userLogin');
+            const userBirthdate = sessionStorage.getItem('userBirthdate');
+            const userGender = sessionStorage.getItem('userGender');
+            const testResult = sessionStorage.getItem('testResult');
+
+            // Заполнение полей личного кабинета
+            document.getElementById('user-login').textContent = userLogin || '-';
+            document.getElementById('user-birthdate').textContent = userBirthdate || '-';
+            document.getElementById('user-gender').textContent = userGender || '-';
+            document.getElementById('test-result').textContent = testResult || 'Результаты отсутствуют';
+
+            // Кнопка выхода
+            document.getElementById('logout').addEventListener('click', () => {
+                sessionStorage.clear();
+                window.location.href = 'index.html';
+            });
+        });
+    </script>
+</body>
+</html>

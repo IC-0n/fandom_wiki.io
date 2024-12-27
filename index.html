@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная - Когда плачут цикады</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="assets/images/logo.jpg" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Когда плачут цикады</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Главная</a></li>
+                <li><a href="dictionary.html">Словарь</a></li>
+                <li><a href="gallery.html">Галерея</a></li>
+                <li><a href="test.html">Тест</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="auth-section">
+            <h2>Авторизация</h2>
+            <form id="authForm"novalidate>
+                <label for="login">Логин:</label>
+                <input type="text" id="login" name="login" placeholder="Введите логин" 
+                       pattern="[а-яА-ЯёЁ0-9]{4,10}" 
+                       minlength="4" 
+                       maxlength="10" 
+                       required 
+                       autocomplete="off">
+                <div class="error-message" id="login-error"></div>
+            
+                <label for="birthDate">Дата рождения:</label>
+                <input type="date" id="birthDate" name="birthDate" 
+                       min="1950-01-01" 
+                       max="2024-12-27" 
+                       required>
+                <div class="error-message" id="birthdate-error"></div>
+            
+                <label for="gender">Пол:</label>
+                <select id="gender" name="gender" required>
+                    <option value="">Выберите</option>
+                    <option value="Мужской">Мужской</option>
+                    <option value="Женский">Женский</option>
+                </select>
+                <div class="error-message" id="gender-error"></div>
+            
+                <button type="submit">Войти</button>
+            </form> 
+        </section>
+
+        <section id="welcome-section" style="display: none;">
+            <h2>Добро пожаловать!</h2>
+            <p>Произведение "Когда плачут цикады" - это японская визуальная новелла, рассказывающая о мистических событиях в деревне Хинамидзава.</p>
+        </section>
+    </main>
+
+    <footer>
+        <section>
+            <h3>Контактные данные</h3>
+            <p>Телефон: <a href="#">+7 (000) 000-00-00</a></p>
+            <p>Соцсети:
+                <a href="#">ВКонтакте</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+            </p>
+        </section>
+        <p>&copy; 2024 Фан-сайт "Когда плачут цикады". Все права защищены.</p>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

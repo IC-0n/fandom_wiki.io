@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест - Когда плачут цикады</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="assets/images/logo.jpg" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Когда плачут цикады</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="dictionary.html">Словарь</a></li>
+                <li><a href="gallery.html">Галерея</a></li>
+                <li><a href="test.html">Тест</a></li>
+                <li><a href="profile.html">Личный кабинет</a></li>
+            </ul>
+        </nav>
+        <p id="user-greeting" class="user-greeting"></p>
+    </header>
+    
+
+    <main>
+        <section id="test-section">
+            <h2>Проверьте свои знания о "Когда плачут цикады"</h2>
+            <form id="testForm">
+                <div class="question">
+                    <p>Вопрос 1: Как называется деревня, в которой происходят события?</p>
+                    <input type="text" name="answer1">
+                    <div class="feedback" id="feedback1"></div>
+                </div>
+                <div class="question">
+                    <p>Вопрос 2: Кто является главным героем истории?</p>
+                    <input type="text" name="answer2">
+                    <div class="feedback" id="feedback2"></div>
+                </div>
+                <div class="question">
+                    <p>Вопрос 3: Как зовут младшую сестру Сатоко?</p>
+                    <label><input type="radio" name="answer3" value="Рика"> Рика</label>
+                    <label><input type="radio" name="answer3" value="Ханю"> Ханю</label>
+                    <div class="feedback" id="feedback3"></div>
+                </div>
+                <div class="question">
+                    <p>Вопрос 4: Как зовут загадочного мужчину, прибывшего в деревню?</p>
+                    <label><input type="radio" name="answer4" value="Такано"> Такано</label>
+                    <label><input type="radio" name="answer4" value="Акасака"> Акасака</label>
+                    <div class="feedback" id="feedback4"></div>
+                </div>
+                <div class="question">
+                    <p>Вопрос 5: Как называется местный фестиваль?</p>
+                    <input type="text" name="answer5">
+                    <div class="feedback" id="feedback5"></div>
+                </div>
+                <div class="question">
+                    <p>Вопрос 6: Кто является автором "Когда плачут цикады"?</p>
+                    <label><input type="radio" name="answer6" value="Рюкиши07"> Рюкиши07</label>
+                    <label><input type="radio" name="answer6" value="Уробучи Ген"> Уробучи Ген</label>
+                    <div class="feedback" id="feedback6"></div>
+                </div>
+                <button type="submit" id="submitTest">Завершить тест</button>
+            </form>
+            <p id="testResult"></p>
+            <button id="retryTest" style="display: none;">Пройти тест снова</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Фан-сайт "Когда плачут цикады". Все права защищены.</p>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
